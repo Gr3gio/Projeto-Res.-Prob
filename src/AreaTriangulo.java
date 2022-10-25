@@ -87,8 +87,8 @@ public class AreaTriangulo extends JFrame{
 				texto_b = valor_b.getText();
 				texto_h = valor_h.getText();
 				
-				b = Integer.parseInt(texto_b);
-				h = Integer.parseInt(texto_h);
+				b = Double.parseDouble(texto_b);
+				h = Double.parseDouble(texto_h);
 				
 				//calcula área
 				a = (b*h)/2;

@@ -69,11 +69,11 @@ public class AreaCirculo extends JFrame{
 				
 				texto_r = valor_r.getText();
 				
-				r = Integer.parseInt(texto_r);
+				r = Double.parseDouble(texto_r);
 				pi = 3.14;
 				
 				//calcula área
-				a = pi * (r*r);
+				a = pi * (Math.pow(2, r));
 				
 				JOptionPane.showMessageDialog(null, "A área do círculo é: "+a);
 				
