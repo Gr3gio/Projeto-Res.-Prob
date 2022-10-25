@@ -158,6 +158,7 @@ public class FormulaBhaskara extends JFrame{
 		    		//de_delta.setBounds(new Rectangle(200, 300,200,50));
 		    		//de_delta.setFont(new Font("Sans Serif", Font.PLAIN, 15));
 		    		
+		        	
 		        	//troquei JLabels por uma caixa de diálogo (poupa do usuário fechar o programa para repetir a ação)
 		    		JOptionPane.showMessageDialog(null, "Delta não possui raiz!");
 		    		
