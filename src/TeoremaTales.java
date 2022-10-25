@@ -136,3 +136,6 @@ public class TeoremaTales extends JFrame{
 	}
 
 }
+
+
+//sim
