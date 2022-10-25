@@ -30,14 +30,14 @@ public class TeoremaTales extends JFrame{
 		add(de_principal);
 		
 		//exemplo imagem
-		ImageIcon img_tales = new ImageIcon("C:\\Users\\thigr\\Desktop\\Faculdade\\2 - Semestre\\SI202\\exemploteoremadetales.png");
+		ImageIcon img_tales = new ImageIcon("adicionais\\exemploteoremadetales.png");
 		JLabel de_imagem = new JLabel();
 		de_imagem.setIcon(new ImageIcon(img_tales.getImage().getScaledInstance(300, 200, 5 )));
 		de_imagem.setBounds(new Rectangle(100, 40,300,200));
 		add(de_imagem);
 		
 		//formula imagem
-		ImageIcon img_tales2 = new ImageIcon("C:\\Users\\thigr\\Desktop\\Faculdade\\2 - Semestre\\SI202\\tales2.png");
+		ImageIcon img_tales2 = new ImageIcon("adicionais\\tales2.png");
 		JLabel de_formula = new JLabel();
 		de_formula.setIcon(new ImageIcon(img_tales2.getImage().getScaledInstance(100, 75, 5 )));
 		de_formula.setBounds(new Rectangle(400, 40,300,200));
@@ -125,6 +125,8 @@ public class TeoremaTales extends JFrame{
 				//de_resultado.setFont(new Font("Sans Serif", Font.PLAIN, 15));
 				//add(de_resultado);
 				
+				
+				//troquei dois JLabels por uma caixa de diálogo (poupa do usuário fechar o programa para repetir a ação)
 				JOptionPane.showMessageDialog(null, "B = ("+int_e+" x "+int_a+") / "+int_d+"\n Valor de 'B' = "+int_b);
 				
 			}
