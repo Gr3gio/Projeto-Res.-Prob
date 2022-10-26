@@ -3,6 +3,7 @@ import java.awt.Font;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,12 +11,12 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class AreaTriangulo extends JFrame{
+public class AreaRetangulo extends JFrame{
 	
-	public AreaTriangulo(String Triangulo){
+	public AreaRetangulo(String Retangulo){
 		
-		//janela triangulo configurações
-		super(Triangulo);
+		//janela retangulo configurações
+		super(Retangulo);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(650, 500);	
 		getContentPane().setBackground(new Color(178,34,34));
@@ -23,30 +24,30 @@ public class AreaTriangulo extends JFrame{
 		
 		
 		JLabel de_principal = new JLabel();
-		de_principal.setText("Área do triangulo");
+		de_principal.setText("Área do retangulo");
 		de_principal.setBounds(new Rectangle(200, 10,500,50));
 		de_principal.setFont(new Font("Sans Serif", Font.ITALIC, 20));
 		add(de_principal);
 		
 		
 		//exemplo imagem
-		ImageIcon img_triangulo = new ImageIcon("adicionais\\triangulo.png");
+		ImageIcon img_retangulo = new ImageIcon("adicionais\\retangulo.png");
 		JLabel de_imagem = new JLabel();
-		de_imagem.setIcon(new ImageIcon(img_triangulo.getImage().getScaledInstance(200, 125, 5 )));
+		de_imagem.setIcon(new ImageIcon(img_retangulo.getImage().getScaledInstance(200, 125, 5 )));
 		de_imagem.setBounds(new Rectangle(125, 50,300,200));
 		add(de_imagem);
 		
-		//imagem da formula
-		ImageIcon img_formula = new ImageIcon("adicionais\\areatriangulo.png");
+		//texto da formula
 		JLabel de_formula = new JLabel();
-		de_formula.setIcon(new ImageIcon(img_formula.getImage().getScaledInstance(150, 75, 5 )));
-		de_formula.setBounds(new Rectangle(325, 50,300,200));
+		de_formula.setText("A = b x h");
+		de_formula.setBounds(new Rectangle(365, 50,300,200));
+		de_formula.setFont(new Font("Sans Serif", Font.PLAIN, 25));
 		add(de_formula);
 		
 		
 		//explicacao do programa
 		JLabel de_explicacao = new JLabel();
-		de_explicacao.setText("<html>A partir da base a da altura fornecida, o programa calculará a área do triangulo.</html>");
+		de_explicacao.setText("<html>A partir da base a da altura fornecida, o programa calculará a área do retangulo.</html>");
 		de_explicacao.setBounds(new Rectangle(25, 200,1000,100));
 		de_explicacao.setFont(new Font("Sans Serif", Font.PLAIN, 15));
 		add(de_explicacao);
@@ -90,15 +91,16 @@ public class AreaTriangulo extends JFrame{
 				h = Double.parseDouble(texto_h);
 				
 				//calcula área
-				a = (b*h)/2;
+				a = (b*h);
 				
-				JOptionPane.showMessageDialog(null, "A área do triangulo é: "+a);
+				JOptionPane.showMessageDialog(null, "A área do retangulo é: "+a);
 				
 			}
 		});
 		add(calcular);
 		
-		//botao de voltar
+		
+		
 		JButton voltar = new JButton("Voltar");
 		voltar.setBounds(250,400, 75,20);
 		voltar.setBackground(Color.LIGHT_GRAY);
@@ -114,6 +116,5 @@ public class AreaTriangulo extends JFrame{
 		add(voltar);
 		
 	}
-	
 
 }

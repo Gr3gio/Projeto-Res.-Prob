@@ -134,6 +134,19 @@ public class TeoremaTales extends JFrame{
 		add(calcular);
 		
 		
+		JButton voltar = new JButton("Voltar");
+		voltar.setBounds(250,400, 75,20);
+		voltar.setBackground(Color.LIGHT_GRAY);
+		voltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				TelaPrincipal telaPrincipal = new TelaPrincipal("Tela inicial");
+				telaPrincipal.setVisible(true);
+				
+			}
+		});		
+		
+		add(voltar);
 		
 	}
 

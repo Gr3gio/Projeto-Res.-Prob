@@ -42,6 +42,7 @@ public class TelaPrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				FormulaBhaskara telaBhaskara = new FormulaBhaskara("Bhaskara");
 				telaBhaskara.setVisible(true);
+				dispose();
 			}
 		});
 		
@@ -56,6 +57,7 @@ public class TelaPrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				TeoremaTales telaTales = new TeoremaTales("Tales");
 				telaTales.setVisible(true);
+				dispose();
 			}
 		});		
 		
@@ -70,6 +72,7 @@ public class TelaPrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				TeoremaPitagoras telaPitagoras = new TeoremaPitagoras("Pitagoras");
 				telaPitagoras.setVisible(true);
+				dispose();
 			}
 		});		
 		
@@ -91,6 +94,7 @@ public class TelaPrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				AreaCirculo telaCirculo = new AreaCirculo("Circulo");
 				telaCirculo.setVisible(true);
+				dispose();
 			}
 		});		
 		
@@ -104,10 +108,27 @@ public class TelaPrincipal extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				AreaTriangulo telaTriangulo = new AreaTriangulo("Triangulo");
 				telaTriangulo.setVisible(true);
+				dispose();
 			}
 		});		
 		
 		add(triangulo);
+		
+		
+		//botao
+		JButton retangulo = new JButton("Retangulo");
+		retangulo.setBounds(450,300, 120,30);
+		retangulo.setBackground(Color.LIGHT_GRAY);
+		retangulo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AreaRetangulo telaRetangulo = new AreaRetangulo("Retangulo");
+				telaRetangulo.setVisible(true);
+				dispose();
+				
+			}
+		});		
+		
+		add(retangulo);
 		
 	
 	}
